@@ -22,7 +22,7 @@ add_library(boost_parameter INTERFACE
 set_property(TARGET boost_parameter PROPERTY EXPORT_NAME parameter)
 
 target_link_libraries(boost_parameter INTERFACE boost::core)
-target_link_libraries(boost_parameter INTERFACE boost::python)
+# target_link_libraries(boost_parameter INTERFACE boost::python)
 target_link_libraries(boost_parameter INTERFACE boost::mpl)
 target_link_libraries(boost_parameter INTERFACE boost::detail)
 target_link_libraries(boost_parameter INTERFACE boost::type_traits)
