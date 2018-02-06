@@ -118,6 +118,7 @@ endif()
 
 
 set(BOOST_CONTEXT_ARCHITECTURE arm64)
+set(binary_format "aapcs")
 
 
 target_sources(boost_context PRIVATE 
