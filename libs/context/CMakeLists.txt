@@ -13,7 +13,7 @@ find_package(boost_pool)
 
 bcm_setup_version(VERSION 1.64.0)
 
-add_library(boost_context 
+add_library(boost_context
 src/dummy.cpp
 src/execution_context.cpp
 )
@@ -62,7 +62,7 @@ elseif("${CMAKE_SYSTEM_PROCESSOR}" STREQUAL "mips")
 else()
   set(default_abi sysv)
 endif()
-  
+
 if(APPLE)
   set(default_binary_format macho)
 elseif(WIN32)
@@ -118,10 +118,10 @@ endif()
 
 
 set(BOOST_CONTEXT_ARCHITECTURE arm64)
-set(binary_format "aapcs")
+set(BOOST_CONTEXT_BINARY_FORMAT aapcs)
 
 
-target_sources(boost_context PRIVATE 
+target_sources(boost_context PRIVATE
   src/asm/make_${BOOST_CONTEXT_ARCHITECTURE}_${BOOST_CONTEXT_ABI}_${BOOST_CONTEXT_BINARY_FORMAT}_${asm_format}
   src/asm/jump_${BOOST_CONTEXT_ARCHITECTURE}_${BOOST_CONTEXT_ABI}_${BOOST_CONTEXT_BINARY_FORMAT}_${asm_format}
   src/asm/ontop_${BOOST_CONTEXT_ARCHITECTURE}_${BOOST_CONTEXT_ABI}_${BOOST_CONTEXT_BINARY_FORMAT}_${asm_format}
