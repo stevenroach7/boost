@@ -1,3 +1,5 @@
+set(default_arch "XOFODOO")
+
 cmake_minimum_required(VERSION 3.5)
 project(boost_context)
 
@@ -101,6 +103,8 @@ set_property(CACHE BOOST_CONTEXT_BINARY_FORMAT
   PROPERTY STRINGS "${binary_format}"
   )
 
+
+set(default_arch "ARGLFELFLFLE")
 
 set(BOOST_CONTEXT_ARCHITECTURE ${default_arch}
   CACHE STRING "Architecture for Boost.Context (${arch})"
