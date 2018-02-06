@@ -115,6 +115,11 @@ else()
 set(asm_format "gas.S")
 endif()
 
+
+
+set(BOOST_CONTEXT_ARCHITECTURE arm64)
+
+
 target_sources(boost_context PRIVATE 
   src/asm/make_${BOOST_CONTEXT_ARCHITECTURE}_${BOOST_CONTEXT_ABI}_${BOOST_CONTEXT_BINARY_FORMAT}_${asm_format}
   src/asm/jump_${BOOST_CONTEXT_ARCHITECTURE}_${BOOST_CONTEXT_ABI}_${BOOST_CONTEXT_BINARY_FORMAT}_${asm_format}
