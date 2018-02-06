@@ -119,6 +119,7 @@ endif()
 
 set(BOOST_CONTEXT_ARCHITECTURE arm64)
 set(BOOST_CONTEXT_ABI aapcs)
+set(BOOST_CONTEXT_BINARY_FORMAT elf)
 
 
 target_sources(boost_context PRIVATE
